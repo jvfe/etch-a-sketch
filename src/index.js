@@ -24,8 +24,11 @@ function makeGrid(dimension) {
         element.addEventListener('mouseover', () => {
             element.classList.add('fill');
             element.style.setProperty('opacity', element.dataset.alpha);
-            element.dataset.alpha = Number(element.dataset.alpha) + 0.1;
-            element.style.setProperty('opacity', element.dataset.alpha);
+            let alphaNumber = Number(element.dataset.alpha);
+            if (alphaNumber < 1) {
+                element.dataset.alpha = alphaNumber + 0.1;
+                element.style.setProperty('opacity', element.dataset.alpha);
+            }
         });
     });
 

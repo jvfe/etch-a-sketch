@@ -17,10 +17,13 @@
                 Etch-a-Sketch
             </h1>
         </div>
+        <p>Choose a size for your sketchboard!</p>
+
         <div id="user-inputs">
-            <p>Choose a size for your sketchboard!</p>
-            <input type="range" name="pixel-size" id="pixel-size" min="4" max="100" value="16">
-            <label id='size-label' for='pixel-size'></label>
+            <div id="range-input">
+                <input type="range" name="pixel-size" id="pixel-size" min="4" max="100" value="16">
+                <label id='size-label' for='pixel-size'></label>
+            </div>
             <button id="reset">
                 New Board
             </button>
