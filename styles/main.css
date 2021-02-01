@@ -28,14 +28,15 @@ body {
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     min-width: 500px;
     min-height: 500px;
+    background-color: white;
   }
   
 .square {
     box-sizing: border-box;
     border: 1px solid gray;
-    background-color: white;
 }
 
 .fill {
     background-color: black;
+    transition: background-color 0.2s linear;
 }

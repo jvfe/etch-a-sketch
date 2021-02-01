@@ -1,4 +1,10 @@
 const canvasGrid = document.querySelector('.canvas-grid');
+const slider = getInputElement();
+const dimension = getPixelSize();
+const reset = document.getElementById('reset');
+
+makeGrid(dimension);
+changeSliderLabel();
 
 function makeGrid(dimension) {
 
@@ -31,19 +37,25 @@ function clearBoard() {
 
 }
 
-let dimension = 16;
+function getInputElement() {
+    return document.getElementById('pixel-size')
+}
 
-makeGrid(dimension);
+function getPixelSize() {
+    return getInputElement().value
+}
 
-const reset = document.getElementById('reset');
+function changeSliderLabel() {
+    sizeLabel = document.getElementById('size-label');
+    sizeLabel.textContent = getPixelSize();
+}
 
-reset.addEventListener('click', () => {
-
+function resetBoard() {
     clearBoard();
+    let newSize = getPixelSize();
+    makeGrid(newSize);
+}
 
-    pixelSize = document.getElementById('pixel-size').value;
-
-    makeGrid(pixelSize);
-
-})
+reset.addEventListener('click', resetBoard);
+slider.addEventListener('mousemove', changeSliderLabel);
 

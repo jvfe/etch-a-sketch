@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <title>🖍 Etch-a-Sketch</title>
 </head>
@@ -18,7 +18,8 @@
             </h1>
         </div>
         <div id="user-inputs">
-            <input type="range" id="pixel-size" min="4" max="100" value="16">
+            <input type="range" name="pixel-size" id="pixel-size" min="4" max="100" value="16">
+            <label id='size-label' for='pixel-size'></label>
             <button id="reset">
                 New Board
             </button>
