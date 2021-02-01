@@ -10,16 +10,40 @@ function makeGrid(dimension) {
         canvasGrid.appendChild(square);
         square.classList.add('square');
     }
+
+    const squares = document.querySelectorAll('.square');
+
+    squares.forEach(element => {
+        element.addEventListener('mouseover', () => {
+            element.classList.add('fill');
+        });
+    });
+
+}
+
+function clearBoard() {
+
+    const squares = document.querySelectorAll('.square');
+
+    squares.forEach(element => {
+        element.remove();
+    });
+
 }
 
 let dimension = 16;
 
-makeGrid(16);
+makeGrid(dimension);
 
-const squares = document.querySelectorAll('.square');
+const reset = document.getElementById('reset');
 
-squares.forEach(element => {
-    element.addEventListener('mouseover', () => {
-        element.classList.add('fill');
-    })
-});
+reset.addEventListener('click', () => {
+
+    clearBoard();
+
+    pixelSize = document.getElementById('pixel-size').value;
+
+    makeGrid(pixelSize);
+
+})
+

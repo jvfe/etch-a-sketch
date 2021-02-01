@@ -14,11 +14,19 @@ body {
     font-family: 'Fira Sans', sans-serif;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .canvas-grid {
     display: grid;
+    margin-top: 2em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    max-width: 500px;
+    min-width: 500px;
     min-height: 500px;
   }
   
