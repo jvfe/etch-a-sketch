@@ -1,7 +1,6 @@
 :root {
     --grid-rows: 1;
     --grid-cols: 1;
-    
 }
 
 body {
@@ -21,6 +20,13 @@ body {
     flex-direction: column;
 }
 
+#user-inputs {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+    text-align: center;
+}
+
 .canvas-grid {
     display: grid;
     margin-top: 2em;
@@ -29,11 +35,12 @@ body {
     min-width: 500px;
     min-height: 500px;
     background-color: white;
+    border: 1px solid gray;
   }
   
 .square {
     box-sizing: border-box;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
 
 .fill {

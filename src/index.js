@@ -15,6 +15,7 @@ function makeGrid(dimension) {
         const square = document.createElement('div');
         canvasGrid.appendChild(square);
         square.classList.add('square');
+        square.dataset.alpha = 0.2;
     }
 
     const squares = document.querySelectorAll('.square');
@@ -22,6 +23,9 @@ function makeGrid(dimension) {
     squares.forEach(element => {
         element.addEventListener('mouseover', () => {
             element.classList.add('fill');
+            element.style.setProperty('opacity', element.dataset.alpha);
+            element.dataset.alpha = Number(element.dataset.alpha) + 0.1;
+            element.style.setProperty('opacity', element.dataset.alpha);
         });
     });
 
@@ -47,7 +51,7 @@ function getPixelSize() {
 
 function changeSliderLabel() {
     sizeLabel = document.getElementById('size-label');
-    sizeLabel.textContent = getPixelSize();
+    sizeLabel.textContent = `${getPixelSize()}x${getPixelSize()}`;
 }
 
 function resetBoard() {
