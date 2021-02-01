@@ -15,3 +15,11 @@ function makeGrid(dimension) {
 let dimension = 16;
 
 makeGrid(16);
+
+const squares = document.querySelectorAll('.square');
+
+squares.forEach(element => {
+    element.addEventListener('mouseover', () => {
+        element.classList.add('fill');
+    })
+});
