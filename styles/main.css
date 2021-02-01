@@ -11,12 +11,12 @@ body {
     margin:0;padding:0;
     width: 100%;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    background: #f1f1f1;
 }
 
 #title {
     margin: 4vh 0 4vh 0;
-    font-family: 'Fira Sans', sans-serif;
 }
 
 .container {
@@ -31,29 +31,44 @@ body {
     grid-template-columns: 2;
     grid-template-rows: 3;
     text-align: center;
+    
+}
+
+#range-input {
+    display: inline-block;
+    min-width: 215px;
+}
+
+#pixel-size {
+    cursor: ew-resize;
+    border: 0.2px solid #010101;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
 #reset {
     margin-top: 5px;
     font-family: inherit;
-    color: #202124;
-    background-color: #f8f9fa;
+    color: black;
+    background-color: #c65453;
+    font-weight: bold;
     border-radius: 5px;
     font-size: medium;
     height: 25px;
-    border: gray;
+    border: 1px solid #65463c;
+    box-shadow: 1px 1px 0px #65463c;
     cursor: pointer;
 }
 
 .canvas-grid {
     display: grid;
     margin-top: 2em;
+    margin-bottom: 2vh;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     min-width: 500px;
     min-height: 500px;
-    background-color: white;
-    border: 1px solid gray;
+    background-color: #fafafa;
+    border: 2px solid #7e7e7e;
   }
   
 .square {
